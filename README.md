@@ -16,15 +16,15 @@ Gmailpassli is a cybersecurity tool designed to help users test the strength of 
    git clone https://github.com/TAYMLINX/Gmailpassli.git
 **2.Navigate to the Directory:**
 
+---------------
 cd Gmailpassli
+---------------
 
-Run the Tool:
+**3.Run the Tool:**
 
-bash
-
-
-
+----------------------
 python password_gui.py
+-----------------------
 
 Input your Email and Password:
 
@@ -36,10 +36,10 @@ Click "Guess Password" to Start:
 
 The tool will attempt to guess the password and provide feedback.
 
-#⚠️ Important Note:
+**⚠️ Important Note:**
 
 **Use responsibly: This tool should only be used to test your own passwords or with explicit permission.**
 
 **Legal Considerations: Ensure compliance with local laws and regulations regarding cybersecurity testing.**
 
-🔒 Stay Secure
+**#🔒 Stay Secure**

@@ -7,7 +7,6 @@ def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def load_passwords(password_file):
-    # تحقق من وجود ملف كلمات المرور
     if not os.path.isfile(password_file):
         print("Password file not found. Exiting.")
         sys.exit()
@@ -20,11 +19,18 @@ def guess_password(passwords, target_email):
 
     for password in passwords:
         print(f"Trying password: {password}")
-        print(f"{target_email} : {password}")
-
-    print("\nFinished guessing passwords.")
-    input("Press Enter to exit...")
+        # هنا يمكنك إضافة شرط للتحقق مما إذا كانت كلمة المرور صحيحة
+        if attempt_login(target_email, password):
+            print(f"Password found: {password}")
+            return
+    print("Password not found. Exiting.")
     sys.exit()
+
+def attempt_login(email, password):
+    # هنا يمكنك إضافة المنطق للتحقق من كلمة المرور
+    # على سبيل المثال: تحقق من كلمة المرور باستخدام API أو أي طريقة أخرى
+    # حاليًا، ستعيد False فقط
+    return False
 
 if __name__ == "__main__":
     clear_screen()
@@ -35,13 +41,16 @@ if __name__ == "__main__":
     print("[-] Tool Created by Your Name")
     
     target_email = input("Enter your email: ")
-    password_file = input("Enter password file (e.g., rockyou.txt): ")
+    password_file = input("Enter password file name: ")
 
-    # إذا كان اسم الملف هو rockyou.txt، استخدمه مباشرة
-    if password_file.lower() == "rockyou.txt":
-        password_file = "rockyou.txt"
+    # البحث عن الملف في النظام
+    password_file_path = os.path.abspath(password_file)
 
-    print(f"Using password file: {password_file}")
+    if not os.path.isfile(password_file_path):
+        print("Password file not found. Exiting.")
+        sys.exit()
 
-    passwords = load_passwords(password_file)
+    print(f"Using password file: {password_file_path}")
+
+    passwords = load_passwords(password_file_path)
     guess_password(passwords, target_email)

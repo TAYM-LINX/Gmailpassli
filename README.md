@@ -9,27 +9,25 @@ Simulates password guessing attacks.
 User-friendly interface for easy interaction.
 Helps improve password strength and security awareness.
 Installation and Usage:
-Clone the Repository:
 
 
-
-Copy
-
-git clone https://github.com/TAYMLINX/Gmailpassli.git
-
-Navigate to the Directory:
-
-bash
+1.**Clone the Repository:**
 
 Copy
 
-cd Gmailpassli
+--- git clone https://github.com/TAYMLINX/Gmailpassli.git
 
-Run the Tool:
+2.**Navigate to the Directory:**
 
 Copy
 
-python password_gui.py
+--- cd Gmailpassli
+
+3.**Run the Tool:**
+
+Copy
+
+--- python password_gui.py
 
 Input your Email and Password:
 

@@ -18,6 +18,8 @@ Gmailpassli is a cybersecurity tool designed to help users test the strength of 
 
 ---------------
 
+pip install pyfiglet
+
 pkg install python-tkinter
 
 cd Gmailpassli

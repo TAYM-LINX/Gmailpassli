@@ -36,11 +36,13 @@ Click "Guess Password" to Start:
 
 The tool will attempt to guess the password and provide feedback.
 
+----------------------------------------------------------------------------------------------------------------
 **⚠️ Important Note:**
 
 **Use responsibly: This tool should only be used to test your own passwords or with explicit permission.**
 
 **Legal Considerations: Ensure compliance with local laws and regulations regarding cybersecurity testing.**
+---------------------------------------------------------------------------------------------------------------
 
 **🔒 Stay Secure**
 *Made by Taym*

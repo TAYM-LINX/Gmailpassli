@@ -23,7 +23,7 @@ cd Gmailpassli
 **3.Run the Tool:**
 
 ----------------------
-python password_gui.py
+python Gmailpassli.py
 -----------------------
 
 Input your Email and Password:

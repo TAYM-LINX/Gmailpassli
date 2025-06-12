@@ -15,19 +15,19 @@ Installation and Usage:
 
 Copy
 
---- git clone https://github.com/TAYMLINX/Gmailpassli.git
+---git clone https://github.com/TAYMLINX/Gmailpassli.git
 
 2.**Navigate to the Directory:**
 
 Copy
 
---- cd Gmailpassli
+---cd Gmailpassli
 
 3.**Run the Tool:**
 
 Copy
 
---- python password_gui.py
+---python password_gui.py
 
 Input your Email and Password:
 

@@ -1,49 +1,52 @@
 # Gmailpassli
-hi i make kali and termux tool name it Gmaipassli 
 
-the code is 
-python : 
+Description:
 
-import random
-import string
-import tkinter as tk
-from tkinter import messagebox
+Gmailpassli is a cybersecurity tool designed to help users test the strength of their passwords. It simulates password guessing attacks, allowing individuals and organizations to identify weak passwords and enhance their security measures. This tool is intended for educational purposes and should be used responsibly.
 
-
-def guess_password():
-    target_email = email_entry.get()
-    target_password = password_entry.get()
-    attempts = 0
-    characters = string.ascii_letters + string.digits + string.punctuation
-
-    while True:
-        guess = ''.join(random.choices(characters, k=len(target_password)))
-        attempts += 1
-        
-        if guess == target_password:
-            messagebox.showinfo("Success", f"Password guessed successfully:\npassword = {guess}\nemail = {target_email}\nin {attempts} attempts.")
-            break
-
-root = tk.Tk()
-root.title("PASSGLUINX")
+Features:
+Simulates password guessing attacks.
+User-friendly interface for easy interaction.
+Helps improve password strength and security awareness.
+Installation and Usage:
+Clone the Repository:
 
 
-title_label = tk.Label(root, text="PASSGLUINX", font=("Arial", 24))
-title_label.pack(pady=20)
 
-email_label = tk.Label(root, text="Email:")
-email_label.pack()
-email_entry = tk.Entry(root, width=30)
-email_entry.pack(pady=5)
+Copy
 
-password_label = tk.Label(root, text="Password:")
-password_label.pack()
-password_entry = tk.Entry(root, width=30)
-password_entry.pack(pady=5)
+git clone https://github.com/TAYMLINX/Gmailpassli.git
 
-# زر بدء التخمين
-guess_button = tk.Button(root, text="Guess Password", command=guess_password)
-guess_button.pack(pady=20)
+Navigate to the Directory:
 
-# تشغيل التطبيق
-root.mainloop()
+bash
+
+Copy
+
+cd Gmailpassli
+
+Run the Tool:
+
+Copy
+
+python password_gui.py
+
+Input your Email and Password:
+
+Enter your Gmail address.
+
+Enter the password you want to test.
+
+Click "Guess Password" to Start:
+
+The tool will attempt to guess the password and provide feedback.
+
+# ⚠️ Important Note:
+
+# Use responsibly: This tool should only be used to test your own passwords or with explicit permission.
+
+# Legal Considerations: Ensure compliance with local laws and regulations regarding cybersecurity testing.
+
+# 🔒 Stay Secure!
+
+Feel free to modify any section as needed!

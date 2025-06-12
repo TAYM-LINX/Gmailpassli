@@ -29,15 +29,16 @@ def guess_password(password_file, target_email):
 if __name__ == "__main__":
     clear_screen()
     
-    # عرض اسم الأداة بتنسيق ASCII
     ascii_art = figlet_format("Gmailpassli", font="slant")
     print(Fore.RED + ascii_art)
     print(Style.RESET_ALL + "Version: 1.0")
     print("[-] Tool Created by Your Name")
     
-    # إدخال البريد الإلكتروني واسم ملف كلمات المرور من المستخدم
     target_email = input("Enter your email: ")
     password_file = input("Enter password file: ")
 
+    # تأكد من أن الملف موجود
+    password_file = os.path.abspath(password_file)  # الحصول على المسار الكامل
     print(f"Using password file: {password_file}")
+
     guess_password(password_file, target_email)

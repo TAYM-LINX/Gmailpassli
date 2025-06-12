@@ -42,4 +42,5 @@ The tool will attempt to guess the password and provide feedback.
 
 **Legal Considerations: Ensure compliance with local laws and regulations regarding cybersecurity testing.**
 
-**#🔒 Stay Secure**
+**🔒 Stay Secure**
+*Made by Taym*

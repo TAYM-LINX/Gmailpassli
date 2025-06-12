@@ -1,12 +1,16 @@
 import os
+import sys
+from colorama import Fore, Style
+
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 def guess_password(password_file):
     # تحقق من وجود ملف كلمات المرور
     if not os.path.isfile(password_file):
         print("Password file not found. Exiting.")
-        return
+        sys.exit()
 
-    # اسم البريد الإلكتروني الثابت
     target_email = "email@example.com"  # استبدل بهذا البريد الإلكتروني
 
     with open(password_file, 'r') as file:
@@ -17,18 +21,23 @@ def guess_password(password_file):
     for password in passwords:
         password = password.strip()
         print(f"Trying password: {password}")
-        
-        # هنا يمكنك إضافة منطق لتخمين كلمة المرور
-        # على سبيل المثال، إذا كنت تريد طباعة البريد وكلمة المرور
         print(f"{target_email} : {password}")
 
     print("\nFinished guessing passwords.")
+    # انتظر حتى يضغط المستخدم على أي مفتاح قبل الخروج
+    input("Press Enter to exit...")
+    sys.exit()
 
 if __name__ == "__main__":
-    print("Gmailpassli")
-    print("Version: 1.0")
+    clear_screen()
+    print(Fore.RED + "Gmailpassli")
+    print(Style.RESET_ALL + "Version: 1.0")
     print("[-] Tool Created by Your Name")
     
-    # تحديد اسم ملف كلمات المرور بشكل ثابت
     password_file = "passwords.txt"  # تأكد من أن الملف موجود في نفس الدليل
+    print("Enter your email: ")
+    print("Email: email@example.com")
+    print("Enter password file: ")
+    print(f"Using password file: {password_file}")
+    
     guess_password(password_file)

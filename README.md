@@ -11,7 +11,7 @@ Gmailpassli is a cybersecurity tool designed to help users test the strength of 
 
 ## Installation and Usage:
 
--1. **Clone the Repository:**
+1. **Clone the Repository:**
    ```bash
    git clone https://github.com/TAYMLINX/Gmailpassli.git
 -**2.Navigate to the Directory:**

@@ -1,46 +1,28 @@
-import random
-import string
-import tkinter as tk
-from tkinter import messagebox
+import os
 
-# Function to guess password
-def guess_password():
-    target_email = email_entry.get()
-    target_password = password_entry.get()
-    attempts = 0
-    characters = string.ascii_letters + string.digits + string.punctuation
+def guess_password(target_email, password_file):
+    
+    if not os.path.isfile(password_file):
+        print("Password file not found. Exiting.")
+        return
 
-    while True:
-        guess = ''.join(random.choices(characters, k=len(target_password)))
-        attempts += 1
+    with open(password_file, 'r') as file:
+        passwords = file.readlines()
+
+    print(f"[*] Starting to guess passwords for {target_email}...\n")
+
+    for password in passwords:
+        password = password.strip()
+        print(f"Trying password: {password}")
         
-        if guess == target_password:
-            messagebox.showinfo("Success", f"Password guessed successfully:\nPassword: {guess}\nEmail: {target_email}\nAttempts: {attempts}.")
-            break
+        
+    print("\nFinished guessing passwords.")
 
-# Setting up the user interface
-root = tk.Tk()
-root.title("Gmailpassli")
-
-# Title
-title_label = tk.Label(root, text="Gmailpassli", font=("Arial", 24))
-title_label.pack(pady=20)
-
-# Email input
-email_label = tk.Label(root, text="Email:")
-email_label.pack()
-email_entry = tk.Entry(root, width=30)
-email_entry.pack(pady=5)
-
-# Password input
-password_label = tk.Label(root, text="Password:")
-password_label.pack()
-password_entry = tk.Entry(root, show="*", width=30)
-password_entry.pack(pady=5)
-
-# Start guessing button
-guess_button = tk.Button(root, text="Guess Password", command=guess_password)
-guess_button.pack(pady=20)
-
-# Running the application
-root.mainloop()
+if __name__ == "__main__":
+    print("Gmailpassli")
+    print("Version: 1.0")
+    print("[-] Tool Created by Your Name")
+    print("[-] Enter the victim's Gmail:")
+    email = input("Enter the victim's Gmail: ")
+    password_file = input("Enter password file: ")
+    guess_password(email, password_file)
